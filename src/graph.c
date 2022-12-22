@@ -15,7 +15,6 @@
 #include <stdio.h>
 #include <string.h>
 
-
 INT BKDRHash(CHAR *pcStr)
 {
     INT iSeed = 131; // 31 131 1313 13131 131313 etc..
