@@ -13,6 +13,7 @@
 #include "../include/graph.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 
 INT BKDRHash(CHAR *pcStr)
@@ -81,7 +82,8 @@ GRAPH_NODE_S* GRAPH_NODE_Add(IN GRAPH_S *pstGraph, IN CHAR *pcNodeName)
     HASH_NODE_S *pstNextN = NULL;
     
     if (NULL == pstGraph || NULL == pcNodeName || 0 == *pcNodeName)
-    {
+    {
+
         return NULL;
     }
  
@@ -124,7 +126,8 @@ GRAPH_NODE_S* GRAPH_NODE_Find(IN GRAPH_S *pstGraph, IN CHAR *pcNodeName)
     BOOL bFind = FALSE;
 
     if (NULL == pstGraph || NULL == pcNodeName || 0 == *pcNodeName)
-    {
+    {
+
         return NULL;
     } 
     pstHead =  pstGraph->pstHashList + pstGraph->pfHashIndexCalc(pcNodeName);
@@ -214,7 +217,8 @@ INT graphLinkComp(IN GRAPH_LINK_S *pstLink1, IN GRAPH_LINK_S *pstLink2)
 
 /*以指定名称节点为根进行Dijkstra计算*/
 ULONG GRAPH_Dijkstra(IN GRAPH_S *pstGraph, IN CHAR *szRootName)
-{
+{
+
     ULONG ulRet              =FAILED;
     GRAPH_NODE_S *pstNode    = NULL;
     GRAPH_LINK_S *pstLink    = NULL;
@@ -251,7 +255,8 @@ ULONG GRAPH_Dijkstra(IN GRAPH_S *pstGraph, IN CHAR *szRootName)
         }
         pstLinkMin = HEAP_PopMin(&stHeap);
         if (pstLinkMin->pstDstNode->bHaveDone == TRUE)
-        {
+        {
+
             bContinue = TRUE;
         }
         else

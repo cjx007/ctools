@@ -11,6 +11,7 @@
 #include "../include/heap.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 /**********************************************************
 Function   : HEAP_Print

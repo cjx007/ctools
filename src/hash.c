@@ -11,6 +11,7 @@
 #include "../include/hash.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 /*´´½¨¹þÏ£±í*/
 ULONG HASH_TABLE_Create(IN HASH_TABLE_S *pstHashTbl, 
